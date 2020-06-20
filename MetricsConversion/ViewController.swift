@@ -77,11 +77,11 @@ class ViewController: UIViewController, UISearchTextFieldDelegate, UIPickerViewD
         convertFromTextField.text = ""
         
         switch row {
-        case 0: let result = convertValue * 0.3048; convertFromTextField.text = String(convertValue) + " ft"; convertToLabel.text = String(result) + " m"
-        case 1: let result = convertValue * 3.28084; convertFromTextField.text = String(convertValue) + " m"; convertToLabel.text = String(result) + " ft"
+        case 0: let result = convertValue * 0.3048; convertFromTextField.text = String(convertValue) + " ft"; convertToLabel.text = String(format: "%.4f", result) + " m"
+        case 1: let result = convertValue * 3.28084; convertFromTextField.text = String(convertValue) + " m"; convertToLabel.text = String(format: "%.4f", result) + " ft"
         default: convertToLabel.text = String(0.0)
         }
-        
+
         
     }
     
