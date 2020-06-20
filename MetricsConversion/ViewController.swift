@@ -36,6 +36,7 @@ class ViewController: UIViewController, UISearchTextFieldDelegate, UIPickerViewD
        
         // When finish editing convert the number in the text field to number
         convertValue = Double(convertFromTextField.text!) ?? 0.0
+        pickerView(convertPickerView, didSelectRow: convertPickerView.selectedRow(inComponent: 0), inComponent: 0)
         
     }
     
