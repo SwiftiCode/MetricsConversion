@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina5_5" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -9,16 +10,92 @@
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="MetricsConversion" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" xcode11CocoaTouchSystemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="b94-P3-fhk">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="2kf-ha-kAy">
+                                        <rect key="frame" x="20" y="30" width="374" height="390.66666666666669"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Convert From:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="24" adjustsLetterSpacingToFitWidth="YES" translatesAutoresizingMaskIntoConstraints="NO" id="B8e-vP-agP">
+                                                <rect key="frame" x="0.0" y="0.0" width="374" height="57.333333333333336"/>
+                                                <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="48"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="0.0" textAlignment="center" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="GR8-Yp-EA9">
+                                                <rect key="frame" x="0.0" y="87.333333333333371" width="374" height="66"/>
+                                                <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="48"/>
+                                                <textInputTraits key="textInputTraits" keyboardType="decimalPad" returnKeyType="done" enablesReturnKeyAutomatically="YES"/>
+                                            </textField>
+                                            <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="k80-hH-CBb">
+                                                <rect key="frame" x="50" y="183.33333333333337" width="274" height="120"/>
+                                                <color key="backgroundColor" red="0.016804177310000001" green="0.19835099580000001" blue="1" alpha="0.0317583476" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="120" id="LCW-Cm-aDN"/>
+                                                </constraints>
+                                            </pickerView>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0.0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="24" adjustsLetterSpacingToFitWidth="YES" translatesAutoresizingMaskIntoConstraints="NO" id="9hR-MF-xxK">
+                                                <rect key="frame" x="0.0" y="333.33333333333331" width="374" height="57.333333333333314"/>
+                                                <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="48"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                        <gestureRecognizers/>
+                                        <constraints>
+                                            <constraint firstItem="GR8-Yp-EA9" firstAttribute="leading" secondItem="2kf-ha-kAy" secondAttribute="leading" id="JLt-Kc-wS3"/>
+                                            <constraint firstAttribute="trailing" secondItem="B8e-vP-agP" secondAttribute="trailing" id="QgE-57-d8k"/>
+                                            <constraint firstItem="9hR-MF-xxK" firstAttribute="leading" secondItem="2kf-ha-kAy" secondAttribute="leading" id="VY4-9q-YCw"/>
+                                            <constraint firstItem="B8e-vP-agP" firstAttribute="leading" secondItem="2kf-ha-kAy" secondAttribute="leading" id="nbD-kb-SsU"/>
+                                            <constraint firstAttribute="trailing" secondItem="9hR-MF-xxK" secondAttribute="trailing" id="nuy-x8-pb9"/>
+                                            <constraint firstItem="k80-hH-CBb" firstAttribute="leading" secondItem="2kf-ha-kAy" secondAttribute="leading" constant="50" id="o6V-Ge-qjb"/>
+                                            <constraint firstAttribute="trailing" secondItem="GR8-Yp-EA9" secondAttribute="trailing" id="spK-IT-tYA"/>
+                                            <constraint firstAttribute="trailing" secondItem="k80-hH-CBb" secondAttribute="trailing" constant="50" id="wgm-bD-hcI"/>
+                                        </constraints>
+                                        <connections>
+                                            <outletCollection property="gestureRecognizers" destination="hL5-fw-MCg" appends="YES" id="Q0L-jE-LdI"/>
+                                        </connections>
+                                    </stackView>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="2kf-ha-kAy" firstAttribute="leading" secondItem="dsM-2O-vU0" secondAttribute="leading" constant="20" id="FRG-IH-NB0"/>
+                                    <constraint firstAttribute="bottom" secondItem="2kf-ha-kAy" secondAttribute="bottom" constant="315.33333333333331" id="JZZ-2A-XTs"/>
+                                    <constraint firstItem="2kf-ha-kAy" firstAttribute="top" secondItem="dsM-2O-vU0" secondAttribute="top" constant="30" id="Rpp-9E-5yn"/>
+                                    <constraint firstItem="dsM-2O-vU0" firstAttribute="trailing" secondItem="2kf-ha-kAy" secondAttribute="trailing" constant="20" id="Sm8-D6-Kuj"/>
+                                    <constraint firstAttribute="trailing" secondItem="2kf-ha-kAy" secondAttribute="trailing" constant="20" id="d7O-Wy-ieS"/>
+                                </constraints>
+                                <viewLayoutGuide key="contentLayoutGuide" id="IFj-3D-apc"/>
+                                <viewLayoutGuide key="frameLayoutGuide" id="dsM-2O-vU0"/>
+                            </scrollView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="b94-P3-fhk" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="2gf-Ba-bP6"/>
+                            <constraint firstItem="b94-P3-fhk" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="AgY-8W-5Lt"/>
+                            <constraint firstItem="b94-P3-fhk" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="WOH-dH-CVH"/>
+                            <constraint firstItem="b94-P3-fhk" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="fRD-0A-H6b"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <connections>
+                        <outlet property="convertFromTextField" destination="GR8-Yp-EA9" id="Doe-gV-P4l"/>
+                        <outlet property="convertPickerView" destination="k80-hH-CBb" id="PGu-pd-95A"/>
+                        <outlet property="convertToLabel" destination="9hR-MF-xxK" id="CDW-q1-jcz"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="hL5-fw-MCg">
+                    <connections>
+                        <action selector="hideKeyboard:" destination="BYZ-38-t0r" id="fT1-Fd-hba"/>
+                    </connections>
+                </tapGestureRecognizer>
             </objects>
+            <point key="canvasLocation" x="132" y="139"/>
         </scene>
     </scenes>
 </document>
